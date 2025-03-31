@@ -244,6 +244,28 @@ createInertiaApp({
 ```
 </details>
 
+* Shared data like User Authentication can be modified inside 
+
+`app > Http > Middleware > HandleInertiaRequests.php`
+
+
+### 7. Project Progress
+
+[x] Routes
+[x] Layouts
+[x] Link and Head
+[x] Progress Indicator
+[x] shared data
+[ ] Named Routes
+[ ] Scroll Preservation
+[ ] Forms
+[ ] Auth Controller
+[ ] Login / Logout
+[ ] Session Messages
+[ ] Filters / Search
+[ ] Authorization
+[ ]
+
 ### Sources
 
 Installation
