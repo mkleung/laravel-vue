@@ -204,24 +204,52 @@ Check if tailwind is working, go to Home.vue and add this code
 
 ### 5. Finally Run the application
 
-Open a terminal tab
+* Open a terminal tab
 `php artisan serve`
 
-Open another terminal tab
-
+* Next open another terminal tab
 `npm run dev`
 
-Go to link
+* Then go to the link
 
 http://127.0.0.1:8000/
 
+
+### 6. Notes
+
+* When adding layouts, Add this code to app.js
+
+<details>
+  <summary><u>resources > js > app.js</u></summary>
+
+```
+import './bootstrap';
+import { createApp, h } from 'vue'
+import { createInertiaApp } from '@inertiajs/vue3'
+import Layout from './Layouts/Layout.vue'
+
+createInertiaApp({
+  resolve: name => {
+    const pages = import.meta.glob('./Pages/**/*.vue', { eager: true })
+    let page = pages[`./Pages/${name}.vue`]
+    page.default.layout = page.default.layout || Layout
+    return page;
+  },
+  setup({ el, App, props, plugin }) {
+    createApp({ render: () => h(App, props) })
+      .use(plugin)
+      .mount(el)
+  },
+})
+```
+</details>
 
 ### Sources
 
 Installation
 
 Project 1
-https://www.youtube.com/watch?v=iGnlmxA7oM8&list=PL38wFHH4qYZXCW2rlBLNdHi5cv-v_qlXO&index=1
+https://www.youtube.com/watch?v=WkH3UE-1xqQ&list=PL38wFHH4qYZXCW2rlBLNdHi5cv-v_qlXO&index=4
 
 Project 2
 https://www.youtube.com/watch?v=NZUspvmsNfw&list=PL38wFHH4qYZUdIKP9jG371N3G4kbWAg2c
