@@ -1,13 +1,40 @@
 # Creating a laravel, Vue and InertiaJs app 🌞
 
-### Main Features
+This is a crud application that has user authentication.
 
--   Authentication & Authorization
--   Emails
--   User Roles & Profile
--   CRUD actions
--   File Upload
--   Dark Mode
+### Running the project
+
+* Open a terminal tab
+`php artisan serve`
+
+* Next open another terminal tab
+`npm run dev`
+
+* Then go to the link
+
+http://127.0.0.1:8000/
+
+### Project Progress
+
+1. [x] Laravel Vue Inertia, Tailwind, Vite Installation  
+2. [x] Pages and Routes
+3. [x] Layouts  
+4. [x] Link and Head  
+5. [x] Progress Indicator  
+6. [x] shared data  
+7. [x] Named Routes (ziggy)  
+8. [x] Scroll Preservation   
+9. [x] Forms  
+10. [ ] Auth Controller  
+11. [ ] Text Input  
+12. [ ] Login Form  
+13. [ ] Logout and Post Links  
+14. [ ] Upload Files  
+15. [ ] Pagination  
+16. [ ] Flash Messages  
+17. [ ] Filters and Search  
+18. [ ] Authorization  
+19. [ ] Deployment  
 
 ### Packages and Tools
 
@@ -150,7 +177,7 @@ Next, Create this file
 ```
 </details>
 
-### 4. Configure vite and Tailwindcss ###
+### 3. Configure vite and Tailwindcss
 
 First run this following commands to install vite and tailwind
 
@@ -202,22 +229,8 @@ Check if tailwind is working, go to Home.vue and add this code
 ```
 
 
-### 5. Finally Run the application
 
-* Open a terminal tab
-`php artisan serve`
-
-* Next open another terminal tab
-`npm run dev`
-
-* Then go to the link
-
-http://127.0.0.1:8000/
-
-
-### 6. Notes
-
-**Layouts**
+### 4. Layouts
 * When adding layouts, Add this code to app.js
 
 <details>
@@ -245,16 +258,16 @@ createInertiaApp({
 ```
 </details>
 
-**Progress Indicator**
+### 5. Progress Indicator
 
 * add `sleep(.5);` inside web.php route
 
-**Shared Data**
+### 6. Shared Data
 * Shared data like User Authentication can be modified inside 
 
 `app > Http > Middleware > HandleInertiaRequests.php`
 
-**Ziggy Installation**
+### 7. Ziggy Installation
 
 * Go to [ziggy](https://github.com/tighten/ziggy)
 * Install `composer require tightenco/ziggy`
@@ -271,30 +284,15 @@ import { ZiggyVue } from '../../vendor/tightenco/ziggy'
 * Then go to `resources > views > app.blade.php` and add `@routes` as new directive
 * Then, we can add routes in our template `<Link :href="route('home')">Home</Link>`
 
-**Scroll preservation**
+### 8. Scroll preservation
 
 * Add `preserve-scroll` to a link (example in Home.vue)
 
-### 7. Project Progress
 
-[x] Routes  
-[x] Layouts  
-[x] Link and Head  
-[x] Progress Indicator  
-[x] shared data  
-[x] Named Routes  
-[x] Scroll Preservation  
-[ ] Forms  
-[ ] Auth Controller  
-[ ] Login / Logout  
-[ ] Session Messages  
-[ ] Filters / Search  
-[ ] Authorization  
-[ ]  
+
 
 ### Sources
 
-Installation
 
 Project 1
 https://www.youtube.com/watch?v=WkH3UE-1xqQ&list=PL38wFHH4qYZXCW2rlBLNdHi5cv-v_qlXO&index=4

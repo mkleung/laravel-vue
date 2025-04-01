@@ -11,3 +11,5 @@ Route::get('/', function () {
 
 
 Route::inertia('/about','About')->name('about');
+
+Route::inertia('/register', 'Auth/Register')->name('register');
