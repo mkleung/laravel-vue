@@ -277,20 +277,20 @@ import { ZiggyVue } from '../../vendor/tightenco/ziggy'
 
 ### 7. Project Progress
 
-[x] Routes
-[x] Layouts
-[x] Link and Head
-[x] Progress Indicator 
-[x] shared data 
-[x] Named Routes 
-[x] Scroll Preservation 
-[ ] Forms
-[ ] Auth Controller
-[ ] Login / Logout
-[ ] Session Messages
-[ ] Filters / Search
-[ ] Authorization
-[ ]
+[x] Routes  
+[x] Layouts  
+[x] Link and Head  
+[x] Progress Indicator  
+[x] shared data  
+[x] Named Routes  
+[x] Scroll Preservation  
+[ ] Forms  
+[ ] Auth Controller  
+[ ] Login / Logout  
+[ ] Session Messages  
+[ ] Filters / Search  
+[ ] Authorization  
+[ ]  
 
 ### Sources
 
