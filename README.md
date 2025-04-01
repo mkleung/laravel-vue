@@ -41,7 +41,7 @@ http://127.0.0.1:8000/
 -   Laravel 11
 -   InertiaJS
 -   VueJS
--   Squlite
+-   Squlite (VSCode SQlite 3 editor)
 -   TailwindCSS
 -   Ziggy
 -   Font Awesome
@@ -284,12 +284,20 @@ import { ZiggyVue } from '../../vendor/tightenco/ziggy'
 * Then go to `resources > views > app.blade.php` and add `@routes` as new directive
 * Then, we can add routes in our template `<Link :href="route('home')">Home</Link>`
 
-### 8. Scroll preservation
+### 9. Scroll preservation
 
 * Add `preserve-scroll` to a link (example in Home.vue)
 
+### 10. Auth Controller (for submitting register form)
 
+`php artisan make:controller AuthController`
 
+* Modify the AuthController in `app > Http > Controllers > AuthController` to add
+validation, user registration, etc
+
+* Add the form to `Register.vue form` and test
+
+* To view SQLite database, install sqlite 3 editor on visual studio code and go to `database > database.sqlite` and select users table to view the newly entered user.
 
 ### Sources
 

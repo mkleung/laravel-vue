@@ -1,14 +1,15 @@
 <script setup>
-import { reactive } from "vue";
 
-const form = reactive({
+import { useForm } from '@inertiajs/vue3'
+
+const form = useForm({
     name: null,
     email: null,
     password: null,
 });
 
 const submit = () => {
-    console.log(form);
+   form.post(route('register'));
 };
 
 </script>
@@ -23,16 +24,19 @@ const submit = () => {
             <div class="mb-6">
                 <label>Name</label>
                 <input type="text" v-model="form.name" />
+                <small class="text-red-500 text-xs italic">{{  form.errors.name }}</small>
             </div>
 
             <div class="mb-6">
                 <label>Email</label>
-                <input type="email" v-model="form.email" />
+                <input type="text" v-model="form.email" />
+                <small class="text-red-500 text-xs italic">{{  form.errors.email }}</small>
             </div>
 
             <div class="mb-6">
                 <label>Password</label>
                 <input type="password" v-model="form.password" />
+                <small class="text-red-500 text-xs italic">{{  form.errors.password }}</small>
             </div>
 
             <div>
