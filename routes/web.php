@@ -7,10 +7,7 @@ use Inertia\Inertia;
 Route::get('/', function () {
     sleep(.5);
     return Inertia::render('Home');
-});
+})->name('home');  // this uses the ziggy named routes
 
-// Route::get('/about', function () {
-//     return inertia('About', ['user'=> 'Mike']);
-// });
 
-Route::inertia('/about','About');
+Route::inertia('/about','About')->name('about');

@@ -2,6 +2,7 @@ import './bootstrap';
 import { createApp, h } from 'vue'
 import { createInertiaApp, Head, Link } from '@inertiajs/vue3'
 import Layout from './Layouts/Layout.vue'
+import { ZiggyVue } from '../../vendor/tightenco/ziggy'
 
 createInertiaApp({
   title: (title) => `My App | ${title}`,
@@ -16,8 +17,9 @@ createInertiaApp({
   setup({ el, App, props, plugin }) {
     createApp({ render: () => h(App, props) })
       .use(plugin)
+      .use(ZiggyVue)
       .component('Head', Head)  // ADD THIS - gets rid of imports in layout
-      .component('Link', Link)
+      .component('Link', Link)  // ADD THIS - uses links instead of anchor tags
       .mount(el)
   },
   // progress bar

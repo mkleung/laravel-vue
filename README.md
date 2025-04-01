@@ -217,6 +217,7 @@ http://127.0.0.1:8000/
 
 ### 6. Notes
 
+**Layouts**
 * When adding layouts, Add this code to app.js
 
 <details>
@@ -244,20 +245,45 @@ createInertiaApp({
 ```
 </details>
 
+**Progress Indicator**
+
+* add `sleep(.5);` inside web.php route
+
+**Shared Data**
 * Shared data like User Authentication can be modified inside 
 
 `app > Http > Middleware > HandleInertiaRequests.php`
 
+**Ziggy Installation**
+
+* Go to [ziggy](https://github.com/tighten/ziggy)
+* Install `composer require tightenco/ziggy`
+* Import ziggy package into app.js
+
+```
+import { ZiggyVue } from '../../vendor/tightenco/ziggy'
+  setup({ el, App, props, plugin }) {
+    createApp({ render: () => h(App, props) })
+      .use(plugin)
+      .use(ZiggyVue)
+      ...
+```
+* Then go to `resources > views > app.blade.php` and add `@routes` as new directive
+* Then, we can add routes in our template `<Link :href="route('home')">Home</Link>`
+
+**Scroll preservation**
+
+* Add `preserve-scroll` to a link (example in Home.vue)
 
 ### 7. Project Progress
 
 [x] Routes
 [x] Layouts
 [x] Link and Head
-[x] Progress Indicator
-[x] shared data
-[ ] Named Routes
-[ ] Scroll Preservation
+[x] Progress Indicator 
+[x] shared data 
+[x] Named Routes 
+[x] Scroll Preservation 
 [ ] Forms
 [ ] Auth Controller
 [ ] Login / Logout
@@ -273,5 +299,3 @@ Installation
 Project 1
 https://www.youtube.com/watch?v=WkH3UE-1xqQ&list=PL38wFHH4qYZXCW2rlBLNdHi5cv-v_qlXO&index=4
 
-Project 2
-https://www.youtube.com/watch?v=NZUspvmsNfw&list=PL38wFHH4qYZUdIKP9jG371N3G4kbWAg2c
