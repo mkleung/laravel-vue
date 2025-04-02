@@ -16,25 +16,25 @@ http://127.0.0.1:8000/
 
 ### Project Progress
 
-1. [x] Laravel Vue Inertia, Tailwind, Vite Installation  
-2. [x] Pages and Routes
-3. [x] Layouts  
-4. [x] Link and Head  
-5. [x] Progress Indicator  
-6. [x] shared data  
-7. [x] Named Routes (ziggy)  
-8. [x] Scroll Preservation   
-9. [x] Forms  
-10. [ ] Auth Controller  
-11. [ ] Text Input  
-12. [ ] Login Form  
-13. [ ] Logout and Post Links  
-14. [ ] Upload Files  
-15. [ ] Pagination  
-16. [ ] Flash Messages  
-17. [ ] Filters and Search  
-18. [ ] Authorization  
-19. [ ] Deployment  
+[x] 1. Laravel Vue Inertia, Tailwind, Vite Installation  
+[x] 2. Pages and Routes
+[x] 3. Layouts  
+[x] 4. Link and Head  
+[x] 5. Progress Indicator  
+[x] 6. shared data  
+[x] 7. Named Routes (ziggy)  
+[x] 8. Scroll Preservation   
+[x] 9. Forms  
+[x] 10. Auth Controller  
+[x] 11. Text Input Component for form
+[x] 12. Login Page  
+[x] 13. Logout Page
+[ ] 14. Upload Files  
+[ ] 15. Pagination  
+[ ] 16. Flash Messages  
+[ ] 17. Filters and Search  
+[ ] 18. Authorization  
+[ ] 19. Deployment  
 
 ### Packages and Tools
 

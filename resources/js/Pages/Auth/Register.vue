@@ -1,6 +1,7 @@
 <script setup>
 
 import { useForm } from '@inertiajs/vue3'
+import TextInput from '../Components/TextInput.vue';
 
 const form = useForm({
     name: null,
@@ -21,27 +22,22 @@ const submit = () => {
 
     <div class="w-2/4 mx-auto mb-[100px]">
         <form @submit.prevent="submit">
-            <div class="mb-6">
-                <label>Name</label>
-                <input type="text" v-model="form.name" />
-                <small class="text-red-500 text-xs italic">{{  form.errors.name }}</small>
-            </div>
 
-            <div class="mb-6">
-                <label>Email</label>
-                <input type="text" v-model="form.email" />
-                <small class="text-red-500 text-xs italic">{{  form.errors.email }}</small>
-            </div>
+            <TextInput title="name" v-model="form.name" :message="form.errors.name" />
 
-            <div class="mb-6">
+            <TextInput title="email" v-model="form.email" :message="form.errors.email" />
+
+            <TextInput title="password" v-model="form.password" :message="form.errors.password" />
+
+            <!-- <div class="mb-6">
                 <label>Password</label>
                 <input type="password" v-model="form.password" />
                 <small class="text-red-500 text-xs italic">{{  form.errors.password }}</small>
-            </div>
+            </div> -->
 
             <div>
                 <p class="text-slate-600">
-                    Already a user? <a href="#" class="text-link">Login</a>
+                    Already a user? <a :href="route('login')" class="text-link">Login</a>
                 </p>
 
                 <button class="primary-btn mt-5">Register</button>
