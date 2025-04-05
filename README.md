@@ -4,15 +4,12 @@ This is a crud application that has user authentication.
 
 ### Running the project
 
-* Open a terminal tab
-`php artisan serve`
+**Option 1**
+* Open a terminal tab: `php artisan serve`
+* Next open another terminal tab: `npm run dev`
 
-* Next open another terminal tab
-`npm run dev`
-
-* Then go to the link
-
-http://127.0.0.1:8000/
+**Option 2**
+* Run concurrently `npm run start`
 
 ### Project Progress
 
@@ -29,7 +26,7 @@ http://127.0.0.1:8000/
 [x] 11. Text Input Component for form
 [x] 12. Login Page  
 [x] 13. Logout Page
-[ ] 14. Upload Files  
+[x] 14. Upload Files  
 [ ] 15. Pagination  
 [ ] 16. Flash Messages  
 [ ] 17. Filters and Search  
@@ -46,6 +43,7 @@ http://127.0.0.1:8000/
 -   Ziggy
 -   Font Awesome
 -   MailTrap
+-   Concurrently
 
 ### 1. Install Laravel and Vue
 
@@ -299,9 +297,17 @@ validation, user registration, etc
 
 * To view SQLite database, install sqlite 3 editor on visual studio code and go to `database > database.sqlite` and select users table to view the newly entered user.
 
+
+
+### 14. Upload files
+
+* check inside storage > app > avatars
+* To add an extra field, go to models > user.php and database > migrations > create_user_table
+* Run a fresh migration `php artisan migrate:fresh` (this drops all the tables and recreate them)
+* To have the storage folder accessible and viewable, use `php artisan storage:link` to create a symbolic link of our storage folder inside the public folder (to show user image in dashboad)
+* Don't forget in middleware > handleInertiaRequests.js, you need to add avatar
+
 ### Sources
-
-
 Project 1
 https://www.youtube.com/watch?v=WkH3UE-1xqQ&list=PL38wFHH4qYZXCW2rlBLNdHi5cv-v_qlXO&index=4
 

@@ -7,9 +7,17 @@
     <div>
         <header>
             <nav>
-                <h1 class="text-3xl font-bold text-white">
-                    Hello {{ $page.props.auth.user }}
-                </h1>
+                <div class="flex flex-row gap-5"  v-if="$page.props.auth.user">
+                    <h1 class="text-3xl font-bold text-white">
+                        Hello {{ $page.props.auth.user.name }}
+                    </h1>
+                    <img
+                        class="avatar"
+                        :src=" $page.props.auth.user.avatar ? 'storage/' + $page.props.auth.user.avatar : 'https://placehold.co/600x400/png'"
+                        alt=""
+                    />
+                </div>
+
                 <div class="flex space-x-6">
                     <Link
                         :href="route('home')"
