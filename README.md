@@ -298,7 +298,6 @@ validation, user registration, etc
 * To view SQLite database, install sqlite 3 editor on visual studio code and go to `database > database.sqlite` and select users table to view the newly entered user.
 
 
-
 ### 14. Upload files
 
 * check inside storage > app > avatars
@@ -306,6 +305,13 @@ validation, user registration, etc
 * Run a fresh migration `php artisan migrate:fresh` (this drops all the tables and recreate them)
 * To have the storage folder accessible and viewable, use `php artisan storage:link` to create a symbolic link of our storage folder inside the public folder (to show user image in dashboad)
 * Don't forget in middleware > handleInertiaRequests.js, you need to add avatar
+
+### 15 Pagination
+
+* php artisan db:seed to generate users. Also modify the DatabaseSeeder file
+
+
+
 
 ### Sources
 Project 1
