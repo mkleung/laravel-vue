@@ -29,9 +29,9 @@ This is a crud application that has user authentication.
 [x] 14. Upload Files  
 [x] 15. Pagination  
 [x] 16. Flash Messages  
-[ ] 17. Filters and Search (Lodash) 
-[ ] 18. Authorization  
-[ ] 19. Deployment  
+[x] 17. Filters and Search (Lodash) 
+[x] 18. Authorization  
+[x] 19. Deployment  
 
 ### Packages and Tools
 
@@ -319,6 +319,11 @@ validation, user registration, etc
 * Debounce will invoke once after the 1/2 second delay
 * `npm i --save lodash`
 
+
+### 18. Admin policy
+
+* `php artisan make:policy UserPolicy`
+* Under app > http > policies > UserPolicy
 
 ### Sources
 Project 1

@@ -8,7 +8,8 @@ import { debounce } from "lodash";
 
 const props = defineProps({
     users: Object,
-    searchTerm: String
+    searchTerm: String,
+    can: Object,
 });
 
 const search = ref(props.searchTerm);
@@ -49,6 +50,7 @@ const getDate = (date) =>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Registration Date</th>
+                        <th v-if="can.delete_user">Delete</th>
                     </tr>
                 </thead>
 
@@ -69,6 +71,9 @@ const getDate = (date) =>
                         <td>{{ user.name }}</td>
                         <td>{{ user.email }}</td>
                         <td>{{ getDate(user.created_at) }}</td>
+                        <td v-if="can.delete_user">
+                            <button class="bg-red-500 w-6 h-6 rounded-full"></button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
