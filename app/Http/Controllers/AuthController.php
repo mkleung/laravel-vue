@@ -33,7 +33,7 @@ class AuthController extends Controller
         Auth::login($user);
 
         // Redirect
-        return redirect()->route('dashboard');
+        return redirect()->route('dashboard')->with('greet', 'welcome to the Laravel app');
 
     }
 

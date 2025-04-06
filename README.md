@@ -18,7 +18,7 @@ This is a crud application that has user authentication.
 [x] 3. Layouts  
 [x] 4. Link and Head  
 [x] 5. Progress Indicator  
-[x] 6. shared data  
+[x] 6. shared data to display author name
 [x] 7. Named Routes (ziggy)  
 [x] 8. Scroll Preservation   
 [x] 9. Forms  
@@ -27,7 +27,7 @@ This is a crud application that has user authentication.
 [x] 12. Login Page  
 [x] 13. Logout Page
 [x] 14. Upload Files  
-[ ] 15. Pagination  
+[x] 15. Pagination  
 [ ] 16. Flash Messages  
 [ ] 17. Filters and Search  
 [ ] 18. Authorization  
