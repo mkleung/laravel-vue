@@ -1,17 +1,25 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 use App\Models\User;
 use Inertia\Inertia;
 
 
-// Route::get('/', function () {
-//     sleep(.5);
-//     return Inertia::render('Home');
-// })->name('home');  
 
-Route::inertia('/', 'Home', ['users' => User::paginate(5)])->name('home');
+Route::get("/", function (Request $request) {
+    return inertia('Home', [
+        'users' => User::when($request->search, function ($query) use ($request) {
+            $query
+            ->where('name', 'like', '%' . $request->search . '%')
+            ->where('email', 'like', '%' . $request->search . '%');
+        })->paginate(5)->withQueryString(),
+
+        'searchTerm' => $request->search
+    ]);
+})->name("home");
 
 Route::inertia('/about', 'About')->name('about');
 

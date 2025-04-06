@@ -1,10 +1,25 @@
 <script setup>
-import { Link } from "@inertiajs/vue3";
-import PaginationLinks from "./Components/PaginationLinks.vue";
 
-defineProps({
+import { Link, router } from "@inertiajs/vue3";
+import PaginationLinks from "./Components/PaginationLinks.vue";
+import { ref, watch } from "vue";
+import { throttle } from "lodash";
+import { debounce } from "lodash";
+
+const props = defineProps({
     users: Object,
+    searchTerm: String
 });
+
+const search = ref(props.searchTerm);
+
+// This adds a route when you type search
+// watch(search, (q) => router.get('/', { search: q}, { preserveState: true }));
+
+// Lodash (delays the search by 1/2 sec)
+watch(search, debounce(
+    (q) => router.get('/', { search: q}, { preserveState: true }), 500)
+);
 
 const getDate = (date) =>
     new Date(date).toLocaleDateString("en-us", {
@@ -16,6 +31,15 @@ const getDate = (date) =>
 
 <template>
     <Head :title="$page.component" />
+
+    <div class="mt-5">
+        <div class="flex justify-end mb-4">
+            <div class="w-1/4">
+                <input type="search" placeholder="Search" v-model="search">
+            </div>
+        </div>
+    </div>
+
     <div class="flex justify-center">
         <div class="my-5">
             <table>

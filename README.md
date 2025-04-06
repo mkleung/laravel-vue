@@ -28,22 +28,23 @@ This is a crud application that has user authentication.
 [x] 13. Logout Page
 [x] 14. Upload Files  
 [x] 15. Pagination  
-[ ] 16. Flash Messages  
-[ ] 17. Filters and Search  
+[x] 16. Flash Messages  
+[ ] 17. Filters and Search (Lodash) 
 [ ] 18. Authorization  
 [ ] 19. Deployment  
 
 ### Packages and Tools
 
--   Laravel 11
--   InertiaJS
--   VueJS
--   Squlite (VSCode SQlite 3 editor)
--   TailwindCSS
--   Ziggy
--   Font Awesome
--   MailTrap
--   Concurrently
+* Laravel 11
+* InertiaJS
+* VueJS
+* Squlite (VSCode SQlite 3 editor)
+* TailwindCSS
+* Ziggy
+* Font Awesome
+* MailTrap
+* Concurrently
+* Lodash (prevents throttle during search)
 
 ### 1. Install Laravel and Vue
 
@@ -310,7 +311,13 @@ validation, user registration, etc
 
 * php artisan db:seed to generate users. Also modify the DatabaseSeeder file
 
+### 17. Search
 
+* Lodash prevents making requests every time you type into the search bar
+* by throttle it by 1/2 second intervals
+* Throttle will invoke our function at 1/2 second intervals
+* Debounce will invoke once after the 1/2 second delay
+* `npm i --save lodash`
 
 
 ### Sources
